@@ -1,0 +1,52 @@
+{% extends 'base.html' %} 
+{% block title %}About Us{% endblock title %}
+{% block keywords %} about who {% endblock keywords %}
+{% block description %}
+    Realities Multimedia Concept is an African production company bringing together marketing and filmmaking professionals. 
+    We provide  brands and events with highly effective video and photo content based on our experience and advanced partnerships.
+{% endblock description %}
+{% block og:description %}
+    Realities Multimedia Concept is an African production company bringing together marketing and filmmaking professionals. 
+    We provide  brands and events with highly effective video and photo content based on our experience and advanced partnerships.
+{% endblock og:description %} 
+{% block og:image %} {% endblock og:image %}
+{% block og:title %}About Us{% endblock og:title %}
+{% block content %} 
+{% load static %}
+
+
+    <!-- Header Start -->
+    <div class="container-fluid hero-header bg-dark py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown text-white">About Us</h1>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid bg-white p-3 w-100" src="img/hero-1.jpg" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid bg-white p-3 w-100" src="img/hero-2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    {% include 'includes/about.html' %}
+
+    {% include 'includes/director.html' %}
+
+
+{% endblock content %}

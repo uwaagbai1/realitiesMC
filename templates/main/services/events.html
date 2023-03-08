@@ -1,0 +1,128 @@
+{% extends 'base.html' %} 
+{% block title %}Events{% endblock title %}
+{% block keywords %} our events services {% endblock keywords %}
+{% block description %}
+    We provide refined, professional events to government agencies, private corporations and individuals who want their big occasion to be memorable. 
+{% endblock description %}
+{% block og:description %}
+    We provide refined, professional events to government agencies, private corporations and individuals who want their big occasion to be memorable. 
+{% endblock og:description %} 
+{% block og:image %} {% endblock og:image %}
+{% block og:title %}Events{% endblock og:title %}
+{% block content %} 
+{% load static %}
+
+    <div class="container-fluid hero-header bg-dark py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown text-white">Events</h1>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'services' %}">Services</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Events</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid bg-white p-3 w-100" src="{% static 'img/service-2.jpg' %}" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid bg-white p-3 w-100" src="{% static 'img/service-2.1.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section pt-120">
+        <div class="container">
+            <div class="row g-4 d-flex justify-content-center">
+                
+                <div class="col-lg-12 col-md-12 col-sm-12 order-1">
+                    <div class="about-card light-version" style="background-color: #f4f4f4">
+                        <div class="about-content">
+                            <h3> EVENTS</h3>
+                            
+                            <p style="text-align: justify">
+                                <span style="font-size:24px">
+                                    We provide refined, professional events to government agencies, private corporations and individuals who want their big occasion to be memorable. 
+                                    Whether it’s a conference, summit, awards ceremony, galadinner or multi-day wedding, our team can assist in making your wildest visions become a reality. 
+                                    Whether you know exactly what you want or have absolutely no clue, we can help envision your event and shape it into an unforgettable experience. 
+                                    Our bespoke event designs mean that your event is one-of-a- kind and our robust processes means that everything will be plannedtoperfection so you only have to worry about having a great time. Our tight- knit team of Event Managers, Specialists and, of course, our Event
+                                    Partners, will make your dream event spectacular.
+                                </span>
+                            </p>
+    
+                            <p>&nbsp;</p>
+    
+                            <h5>Corporate Events</h5>
+    
+                            <p style="text-align: justify"><p>
+                                <span style="font-size:24px">
+                                    Realities Multimedia Concept will design and manage various corporate events including conferences, gala dinners, annual awards, summit, large-scale shareholder meetings and more.
+                                </span><br><br>
+                                <span style="font-size:24px">
+                                    Whether it’s a single-day or multi-day event, our team can look after every single aspect of your guest experience including transport, entertainment, venue, audio/visual, catering, floristry, equipment hire, event design, print design, and event management. 
+                                    Our all-inclusive involvement also ensures you’ll only have to deal with one person instead of ten — a great stress eliminator!
+                                </span><br><br>
+                                <span style="font-size:24px">
+                                    We carefully plan, coordinate and execute every element (big and small) to perfection to provide clients and audiences with a unique, mesmerisingand unforgettable event experience.
+                                </span><br><br>
+                                <span style="font-size:24px">
+                                    If you’d like to be more hands-on in the creation and coordination of your event, we can work with you to ensure a cohesive vision is achievedandthat the production of the event is absolutely seamless.
+                                </span>
+                            </p>
+    
+    
+                            <h5>Public Events</h5>
+    
+                            <p style="text-align: justify"><p>
+                                <span style="font-size:24px">
+                                    Realities Multimedia Concept will coordinate and manage various community and ticketed events including festivals, concerts, expos and more.
+                                </span><br><br>
+                                <span style="font-size:24px">
+                                    Whether it’s a multi-day affair, a centennial year, or the first event of itskind, Watson & Wyatt can provide a unique vision, total theme cohesionand seamless event production to ensure a polished, professional event.
+                                </span><br><br>
+                                <span style="font-size:24px">
+                                    We can look after every detail if you so desire, or can simply assist withthe event brief (planning and design) to take to your vendors to ensure that everyone is on the same page and is working towards the same vision and guest experience.
+                                </span>
+                            </p>
+    
+                            <h5>Weddings or Private Events</h5>
+    
+                            <p style="text-align: justify"><p>
+                                <span style="font-size:24px">
+                                    Using our creative and logistical expertise we can make your wedding day or private event perfectand seamless. No detail is too small on your special day.
+                                </span><br><br>
+                                <span style="font-size:24px">
+                                    Do you have a large guest list? 
+                                    Is your wedding a must-day event? Wedesign beautiful bespoke destination weddings for discerning people whoknows what they want. 
+                                    Best suppliers and the best secret spots to be.
+                                </span><br><br>
+                                <span style="font-size:24px">
+                                    No location is too tough. 
+                                    We create events in the middle of. 
+                                    We make it happen as one point of contact to give you an stress-free event that your guests will remember.
+                                </span>
+                            </p>
+    
+                        </div>   
+                        
+                    </div>
+                    <div class="mb-2"></div>
+                    <center>
+                        <a class="btn btn-primary py-3 px-5" href="{% url 'services' %}">Go Back To Services</a>
+                    </center>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        
+
+{% endblock content %}

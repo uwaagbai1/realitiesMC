@@ -1,0 +1,53 @@
+{% extends 'base.html' %} 
+{% block title %}Our Services{% endblock title %}
+{% block keywords %} our services {% endblock keywords %}
+{% block description %}
+    We Provide Best Professional Services
+{% endblock description %}
+{% block og:description %}
+    We Provide Best Professional Services
+{% endblock og:description %} 
+{% block og:image %} {% endblock og:image %}
+{% block og:title %}Our Services{% endblock og:title %}
+{% block content %} 
+{% load static %}
+
+
+    <!-- Header Start -->
+    <div class="container-fluid hero-header bg-dark py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown text-white">Our Services</h1>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Our Services</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid bg-white p-3 w-100" src="{% static 'img/service-2.jpg' %}" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid bg-white p-3 w-100" src="{% static 'img/service-4.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    {% include 'includes/services.html' %}
+
+
+
+    {% include 'includes/testimonials.html' %}
+
+
+
+{% endblock content %}

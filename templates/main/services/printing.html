@@ -1,0 +1,68 @@
+{% extends 'base.html' %} 
+{% block title %}Printing Services{% endblock title %}
+{% block keywords %} printing services {% endblock keywords %}
+{% block description %}
+    We offer all types of business prints  at remarkable rates. Whether you are looking for Plastic ID Cards, business cards, brochures, postcards, large format printing, flyers, folders, reports, posters, letterhead, stickers, or door hangers (and much more), we have the experience and expertise to deliver exactly what you want, right on time.
+{% endblock description %}
+{% block og:description %}
+    We offer all types of business prints  at remarkable rates. Whether you are looking for Plastic ID Cards, business cards, brochures, postcards, large format printing, flyers, folders, reports, posters, letterhead, stickers, or door hangers (and much more), we have the experience and expertise to deliver exactly what you want, right on time.
+{% endblock og:description %} 
+{% block og:image %} {% endblock og:image %}
+{% block og:title %}Printing Services{% endblock og:title %}
+{% block content %} 
+{% load static %}
+
+    <div class="container-fluid hero-header bg-dark py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown text-white">CVC and General Printing</h1>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'services' %}">Services</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">CVC and General Printing</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid bg-white p-3 w-100" src="{% static 'img/service-4.jpg' %}" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid bg-white p-3 w-100" src="{% static 'img/service-4.1.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about-section pt-120">
+        <div class="container">
+            <div class="row g-4 d-flex justify-content-center">
+            
+                <div class="col-lg-12 col-md-12 col-sm-12 order-1">
+                    <div class="about-card light-version" style="background-color: #f4f4f4">
+                        <div class="about-content">
+                            <h3>CVC AND GENERAL PRINTING</h3>
+                            <p style="text-align: justify"><p>
+                                <span style="font-size:24px">
+                                    We offer all types of business prints  at remarkable rates. Whether you are looking for Plastic ID Cards, business cards, brochures, postcards, large format printing, flyers, folders, reports, posters, letterhead, stickers, or door hangers (and much more), we have the experience and expertise to deliver exactly what you want, right on time.
+                                </span>
+                            </p>    
+                        </div>           
+                    </div>
+                    <div class="mb-2"></div>
+                    <center>
+                        <a class="btn btn-primary py-3 px-5" href="{% url 'services' %}">Go Back To Services</a>
+                    </center>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+        
+
+{% endblock content %}

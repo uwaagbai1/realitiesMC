@@ -1,0 +1,159 @@
+{% extends 'base.html' %} 
+{% block title %}Home{% endblock title %}
+{% block keywords %} homepage index {% endblock keywords %}
+{% block description %}
+    Realities Multimedia Concept is an African production company bringing together marketing and filmmaking professionals. 
+    We provide  brands and events with highly effective video and photo content based on our experience and advanced partnerships.
+{% endblock description %}
+{% block og:description %}
+    Realities Multimedia Concept is an African production company bringing together marketing and filmmaking professionals. 
+    We provide  brands and events with highly effective video and photo content based on our experience and advanced partnerships.
+{% endblock og:description %} 
+{% block og:image %} {% endblock og:image %}
+{% block og:title %}Home{% endblock og:title %}
+{% block meta %}<meta name="google-site-verification" content="ybqsnTjsq7MX2MbYBi4XdrE3J_lDbEB8XNu_UjGuY4s" />{% endblock meta %}
+{% block content %} 
+{% load static %}
+
+<!-- Header Start -->
+<div class="container-fluid hero-header bg-dark py-5 mb-5">
+  <div class="container py-5">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <p class="text-primary text-uppercase mb-2 animated slideInDown">
+          Welcome To Realities Multimedia Concept
+        </p>
+        <h1 class="display-4 mb-3 animated slideInDown text-white">
+          Multimedia Agency Based in Lome Togo
+        </h1>
+        <p class="animated slideInDown">
+            We produce high-performing videos, images and graphics for events & brands.            
+        </p>
+        <div class="d-flex align-items-center pt-4 animated slideInDown">
+          <a href="{% url 'services' %}" class="btn btn-primary py-3 px-4 me-5">Explore More</a>
+          <button
+            type="button"
+            class="btn-play"
+            data-bs-toggle="modal"
+            data-src="https://youtu.be/kOgSmPaBZWU"
+            data-bs-target="#videoModal"
+          >
+            <span></span>
+          </button>
+          <h5 class="ms-4 mb-0 d-none d-sm-block">Play Video</h5>
+        </div>
+      </div>
+      <div class="col-lg-6 animated fadeIn">
+        <div class="row g-3">
+          <div class="col-6 text-end">
+            <img
+              class="img-fluid bg-white p-3 w-100 mb-3"
+              src="{% static 'img/hero-1.jpg' %}"
+              alt=""
+            />
+            <img
+              class="img-fluid bg-white p-3 w-50"
+              src="{% static 'img/hero-3.jpg' %}"
+              alt=""
+            />
+          </div>
+          <div class="col-6">
+            <img
+              class="img-fluid bg-white p-3 w-50 mb-3"
+              src="{% static 'img/hero-4.jpg' %}"
+              alt=""
+            />
+            <img
+              class="img-fluid bg-white p-3 w-100"
+              src="{% static 'img/hero-2.jpg' %}"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Header End -->
+
+<!-- Video Modal Start -->
+<div
+  class="modal modal-video fade"
+  id="videoModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content rounded-0">
+      <div class="modal-header">
+        <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <!-- 16:9 aspect ratio -->
+        <div class="ratio ratio-16x9">
+          <iframe
+            class="embed-responsive-item"
+            src=""
+            id="video"
+            allowfullscreen
+            allowscriptaccess="always"
+            allow="autoplay"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Video Modal End -->
+
+{% include 'includes/about.html' %}
+
+{% include 'includes/services.html' %}
+
+<!-- Project Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div
+      class="text-center mx-auto mb-5 wow fadeInUp"
+      data-wow-delay="0.1s"
+      style="max-width: 500px"
+    >
+      <p class="text-primary text-uppercase mb-2">Our Works</p>
+      <h1 class="display-6 mb-0">
+        Discover Our Unique And Creative Photoshoot
+      </h1>
+    </div>
+    <div class="row g-3">
+        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+            <div class="row g-3">
+                <div class="col-12">
+                    <div class="project-item">
+                    <img class="img-fluid" src="img/project-4.jpg" alt="" />
+                    <a
+                        class="project-title h5 mb-0"
+                        href="img/project-4.jpg"
+                        data-lightbox="project"
+                    >
+                        Fashion
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!-- Project End -->
+
+{% include 'includes/director.html' %}
+
+{% include 'includes/testimonials.html' %}
+
+{% endblock content%}

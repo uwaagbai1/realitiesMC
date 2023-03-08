@@ -1,0 +1,5 @@
+{
+    "app_type": "python",
+    "startup_file": "passenger_wsgi.py"
+}
+
