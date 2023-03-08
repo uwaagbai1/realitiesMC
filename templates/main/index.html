@@ -120,34 +120,27 @@
 <!-- Project Start -->
 <div class="container-xxl py-5">
   <div class="container">
-    <div
-      class="text-center mx-auto mb-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-      style="max-width: 500px"
-    >
-      <p class="text-primary text-uppercase mb-2">Our Works</p>
-      <h1 class="display-6 mb-0">
-        Discover Our Unique And Creative Photoshoot
-      </h1>
-    </div>
-    <div class="row g-3">
-        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-            <div class="row g-3">
-                <div class="col-12">
-                    <div class="project-item">
-                    <img class="img-fluid" src="img/project-4.jpg" alt="" />
-                    <a
-                        class="project-title h5 mb-0"
-                        href="img/project-4.jpg"
-                        data-lightbox="project"
-                    >
-                        Fashion
-                    </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+      <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <p class="text-primary text-uppercase mb-2">Our Works</p>
+          <h1 class="display-6 mb-0">Discover Our Unique And Creative Photoshoot</h1>
+      </div>
+      
+      <div class="row g-3">
+          {% for project in latest_projects|slice:'4' %}
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+              <div class="row g-3">
+                  <div class="col-12">
+                      <div class="project-item">
+                          <img class="img-fluid" src="{{ project.image.url }}" alt="">
+                          <a class="project-title h5 mb-0" href="{{ project.image.url }}" data-lightbox="project">
+                              {{ project.category }}
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          {% endfor %}
+      </div>
   </div>
 </div>
 <!-- Project End -->

@@ -10,8 +10,11 @@ from main.forms import ContactForm
 from main.models import Project
 
 def index(request):
-
-    return render(request, "main/index.html")
+    latest_projects = Project.objects.filter(status=1).order_by('-updated_on')
+    context = {
+        'latest_projects':latest_projects
+    }
+    return render(request, "main/index.html", context)
 
 def about(request):
 
