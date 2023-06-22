@@ -1,0 +1,59 @@
+{% extends 'base.html' %} 
+{% block title %}Our Skills MasterClass{% endblock title %}
+{% block keywords %} our skills masterclass holidays programmes{% endblock keywords %}
+{% block description %}
+    Enhance your skills and make the most of your holidays by joining our exciting and educational courses. 
+    Our expert instructors are here to guide you through a range of topics, from creative design to cutting-edge technology. 
+    Discover new horizons and unlock your potential with our carefully curated classes.
+{% endblock description %}
+{% block og:description %}
+    Enhance your skills and make the most of your holidays by joining our exciting and educational courses. 
+    Our expert instructors are here to guide you through a range of topics, from creative design to cutting-edge technology. 
+    Discover new horizons and unlock your potential with our carefully curated classes.
+{% endblock og:description %} 
+{% block og:image %} {% endblock og:image %}
+{% block og:title %}Our Skills MasterClass{% endblock og:title %}
+{% block content %} 
+{% load static %}
+
+
+    <!-- Header Start -->
+    <div class="container-fluid hero-header bg-dark py-5 mb-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 mb-3 animated slideInDown text-white">Our MasterClass Programmes</h1>
+                    <nav aria-label="breadcrumb animated slideInDown">
+                        <ol class="breadcrumb mb-0">
+                            <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Our MasterClass Programmes</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 animated fadeIn">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid bg-white p-3 w-100" src="{% static 'img/photoshop.jpeg' %}" alt="">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid bg-white p-3 w-100" src="{% static 'img/webdesign.jpeg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xxl py-5">
+        <div class="container">
+            {{ item.content|safe }}
+        </div>
+    </div>
+
+
+
+    {% include 'includes/testimonials.html' %}
+
+
+
+{% endblock content %}

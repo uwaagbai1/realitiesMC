@@ -14,6 +14,6 @@ urlpatterns = [
     path('our-services/travels-and-logistics/', travels, name="travels"),
     path('our-projects/', ProjectsView.as_view(), name="projects"),
     path('contact-us/', contact, name="contact"),
-    path('talent-discovery/', talents, name="talents"),
+    path('masterclass/', masterclass, name="masterclass"),
 
 ]

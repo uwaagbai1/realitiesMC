@@ -20,7 +20,7 @@
     {% block meta %}{% endblock meta %}
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon" />
+    
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -101,7 +101,7 @@
         </a>
         <div class="navbar-nav me-auto py-0">
           <a href="{% url 'projects' %}" class="nav-item nav-link {% if request.path == '/our-projects/' %}active{% endif%}">Projects</a>
-          <a href="{% url 'talents' %}" class="nav-item nav-link {% if request.path == '/talent-discovery/' %}active{% endif%}">Talents Discovery</a>
+          <a href="{% url 'masterclass' %}" class="nav-item nav-link {% if request.path == '/masterclass/' %}active{% endif%}">MasterClass</a>
           <a href="{% url 'contact' %}" class="nav-item nav-link {% if request.path == '/contact-us/' %}active{% endif%}">Contact</a>
           
         </div>
@@ -118,7 +118,7 @@
     >
       <div class="row g-5 py-5">
         <div class="col-lg-6 pe-lg-5">
-          <a href="index.html" class="navbar-brand">
+          <a href="{% url 'index' %}" class="navbar-brand">
             <h1 class="display-5 text-primary">Realities</h1>
           </a>
           

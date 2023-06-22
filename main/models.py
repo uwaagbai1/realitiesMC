@@ -25,3 +25,17 @@ class Project(BaseModel):
     def __str__(self):
         return self.title
     
+class MasterClass(BaseModel):
+
+    title = models.CharField(max_length=250)
+    content = models.TextField()
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    def get_short_content(self):
+        return self.content [:200]
+        
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        get_latest_by = 'updated_on'

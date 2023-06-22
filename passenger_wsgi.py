@@ -1,9 +1,11 @@
-import imp
-import os
 import sys
+import os
 
+# Add the directory containing your project to the sys.path
+sys.path.append('/home/realiti3/public_html/realitiesMC')
 
-sys.path.insert(0, os.path.dirname(__file__))
+# Set the DJANGO_SETTINGS_MODULE environment variable
+os.environ['DJANGO_SETTINGS_MODULE'] = 'config.settings'
 
-wsgi = imp.load_source('wsgi', 'config/wsgi.py')
-application = wsgi.application
+# Import the WSGI application object from your project's wsgi.py file
+from config.wsgi import application

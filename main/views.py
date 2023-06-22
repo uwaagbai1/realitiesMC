@@ -7,7 +7,7 @@ from django.conf import settings
 
 from main.decorators import check_recaptcha
 from main.forms import ContactForm
-from main.models import Project
+from main.models import Project, MasterClass
 
 def index(request):
     latest_projects = Project.objects.filter(status=1).order_by('-updated_on')
@@ -86,40 +86,15 @@ def contact(request):
 
     return render(request, "main/contact.html", context)
 
-@check_recaptcha
-def talents(request):
-    if request.method == "POST":
-        contact_form = ContactForm(request.POST)
+def masterclass(request):
 
-        if contact_form.is_valid() and request.recaptcha_is_valid:
-            subject = "Talent DIscovery"
-            body = {
-            'full_name': 'Name: ' + contact_form.cleaned_data['full_name'],
-			'subject': 'Subject: ' + contact_form.cleaned_data['subject'],
-            'email_address': 'Email Address: ' + contact_form.cleaned_data['email_address'],
-			'message':'Message: ' + contact_form.cleaned_data['message'],
-			}
-            from_email = contact_form.cleaned_data['email_address']
-            message = "\n".join(body.values())
-            recipents = ['info@realitiesmedia.org']
-            try:
-                send_mail(subject, message, from_email, recipents, fail_silently=False)
-            except BadHeaderError:
-                return HttpResponse('Invalid header found.')
-            messages.success(request, "Thanks, We will get back to you Shortly..")
-            return redirect("contact")
-        else:
-            messages.error(request, "Message was not sent, Please Try Again Later!")
-            return redirect("contact")
-            
-    contact_form = ContactForm()
-    site_key = settings.GOOGLE_RECAPTCHA_SITE_KEY
+    item = MasterClass.objects.latest()
+    
     context = {
-        'form': contact_form,
-        'site_key': site_key,
+        'item': item,
     }
 
-    return render(request, "main/talents.html", context)
+    return render(request, "main/masterclass.html", context)
 
 def page_not_found(request, exception):
     return render(request, '404.html', status=404)
